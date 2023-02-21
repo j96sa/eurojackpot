@@ -1,8 +1,10 @@
 const $btn = document.querySelector('.btn'),
-$show = document.querySelector('.show');
+$show = document.querySelector('.show'),
+$display = document.querySelector('.display');
+
 
 $btn.addEventListener("click",e=>{
-$show.innerHTML = `<p>${getFullPlay().main}</p> <p>${getFullPlay().second}</p>`
+    $show.innerHTML = `<h1>${getFullPlay().main}</h1> <h1>${getFullPlay().second}</h1>`;
 });
 
 const MAIN_PLAY_NUMBERS = {
@@ -14,6 +16,10 @@ const SECOND_PLAY_NUMBERS = {
     Zuma:[01,04,06,08,11],
     Paulo:[03,05,07,09,12]
 };
+$display.innerHTML = `
+    <p>Zuma: ${MAIN_PLAY_NUMBERS.Zuma} - ${SECOND_PLAY_NUMBERS.Zuma} </p>
+    <p>Paulo: ${MAIN_PLAY_NUMBERS.Paulo} - ${SECOND_PLAY_NUMBERS.Paulo}</p>
+`;
 
 const allMainNumbers = MAIN_PLAY_NUMBERS.Zuma.concat(MAIN_PLAY_NUMBERS.Paulo).sort((a,b)=> a > b ?1 :-1);
 const allSecondNUmbers = SECOND_PLAY_NUMBERS.Zuma.concat(SECOND_PLAY_NUMBERS.Paulo);
