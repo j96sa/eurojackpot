@@ -8,13 +8,13 @@ $btn.addEventListener("click",e=>{
 });
 
 const MAIN_PLAY_NUMBERS = {
-    Zuma:[02,05,15,18,20,24,35,39,41,47,50,52],
-    Paulo:[04,07,13,19,22,26,34,38,44,45,51,53]
+    Zuma:[03,05,10,15,20,25,34,39,42,45],
+    Paulo:[04,07,13,19,22,26,36,38,44,48]
 };
 
 const SECOND_PLAY_NUMBERS = {
-    Zuma:[01,04,06,08,11],
-    Paulo:[03,05,07,09,12]
+    Zuma:[03,10],
+    Paulo:[05,07,09]
 };
 $display.innerHTML = `
     <p>Zuma: ${MAIN_PLAY_NUMBERS.Zuma} - ${SECOND_PLAY_NUMBERS.Zuma} </p>
